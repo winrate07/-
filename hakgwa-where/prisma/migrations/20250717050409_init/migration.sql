@@ -1,0 +1,30 @@
+-- CreateTable
+CREATE TABLE "Recommend" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "grade" TEXT NOT NULL,
+    "scores" TEXT NOT NULL,
+    "aptitude" TEXT NOT NULL,
+    "interest" TEXT NOT NULL,
+    "region" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- CreateTable
+CREATE TABLE "AptitudeTest" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "q1" TEXT NOT NULL,
+    "q2" TEXT NOT NULL,
+    "q3" TEXT NOT NULL,
+    "q4" TEXT NOT NULL,
+    "q5" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- CreateTable
+CREATE TABLE "Consult" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL,
+    "email" TEXT NOT NULL,
+    "content" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

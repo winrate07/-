@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Recommend {
+  id           Int      @id @default(autoincrement())
+  grade        String
+  scores       String   // 예: "국어 2등급, 수학 3등급"
+  aptitude     String   // 적성/흥미
+  interest     String   // 관심분야
+  region       String   // 선호지역
+  createdAt    DateTime @default(now())
+}
+
+model AptitudeTest {
+  id           Int      @id @default(autoincrement())
+  q1           String
+  q2           String
+  q3           String
+  q4           String
+  q5           String
+  createdAt    DateTime @default(now())
+}
+
+model Consult {
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String
+  content      String
+  createdAt    DateTime @default(now())
+}
