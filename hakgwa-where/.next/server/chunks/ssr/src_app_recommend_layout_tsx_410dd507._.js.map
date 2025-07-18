@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["file:///Users/hyeonseungk/Desktop/-/hakgwa-where/src/app/recommend/layout.tsx"],"sourcesContent":["export default function RecommendLayout({ children }: { children: React.ReactNode }) {\n  return <>{children}</>;\n} "],"names":[],"mappings":";;;;;AAAe,SAAS,gBAAgB,EAAE,QAAQ,EAAiC;IACjF,qBAAO;kBAAG;;AACZ","debugId":null}}]
+}
